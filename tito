@@ -1,0 +1,23 @@
+# Tabuleiro de jogo
+print("*" * 10, 'Jogo da velha', '*' * 10)
+board = list(range(1,10))
+for i in range(3):
+    print("|", board[0+i*3], "|", board[1+i*3], "|", board[2+i*3], "|")
+    
+# Movimentos dos jogadores
+while True:
+    
+    # Jogada do primeiro jogador
+    player_1 = int(input('Escolha onde colocar um X:'))
+    if player_1 == 1 or player_1 == 2 or player_1 == 3 or player_1 == 4 or player_1 == 5 or player_1 == 6 or player_1 == 7 or player_1 == 8 or player_1 == 9:
+        board[player_1 - 1] = 'X'
+        for i in range(3):
+            print("|", board[0+i*3], "|", board[1+i*3], "|", board[2+i*3], "|")
+    
+    
+    # Jogada do segundo jogador
+    player_2 = int(input('Escolha onde colocar um O:'))
+    if player_2 == 1 or player_2 == 2 or player_2 == 3 or player_2 == 4 or player_2 == 5 or player_2 == 6 or player_2 == 7 or player_2 == 8 or player_2 == 9:
+        board[player_2 - 1] = 'O'
+        for i in range(3):
+            print("|", board[0+i*3], "|", board[1+i*3], "|", board[2+i*3], "|")
